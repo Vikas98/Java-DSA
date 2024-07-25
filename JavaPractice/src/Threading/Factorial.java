@@ -1,5 +1,7 @@
 package Threading;
 
+import java.math.BigInteger;
+
 public class Factorial implements Runnable{
     int item;
 
@@ -12,11 +14,11 @@ public class Factorial implements Runnable{
          factorial();
     }
     private  void factorial() {
-        int output = 1;
+        BigInteger output = BigInteger.ONE;
         for (int i = 2; i <=this.item ; i++) {
-            output *= i;
+            output = output.multiply(BigInteger.valueOf(i));
         }
-        System.out.println("factorial of a number "+item+" is "+ output+"" +
+        System.out.println("factorial of a number "+item +
                 " calculated by thread "+ Thread.currentThread().getName());;
     }
 }
