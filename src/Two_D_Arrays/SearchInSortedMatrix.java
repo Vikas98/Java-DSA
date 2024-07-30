@@ -27,4 +27,5 @@ public class SearchInSortedMatrix {
                           {32,33,39,50}};
         System.out.println(searchInMatrix(matrix,25));
     }
+
 }
